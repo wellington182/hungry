@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hungry</title>
+    <link rel="shortcut icon" href="./_img/icon2.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./_css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./_css/style.css">
+</head>
+<body>
+    <header>
+        <a href="./" class="logo">
+            <h1>
+                Hungry
+            </h1>
+        </a>
+
+        <nav>            
+            <input type="checkbox" id="chk">
+            <label for="chk" class="btn-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            
+            <h2 class="title-menu">Menu</h2>
+            <ul class="menu">
+                <li>
+                    <a href="./bebidas.html">Bebidas</a>
+                </li>
+                <li>
+                    <a href="./doces.html">Doces</a>
+                </li>
+                <li>
+                    <a href="./salgados.html">Salgados</a>
+                </li>
+                <li>
+                    <a href="./utensilios.html">Utensílios</a>
+                </li>
+                <li>
+                    <a href="./contato.html" class="active">Contato</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="hero hero-contato">
+            <div class="hero-slogan">
+                <h2 class="hero-title">
+                    HUNGRY DAYS?
+                </h2>
+                <p class="hero-subtitle">A melhor distribuidora da cidade para você e seu negócio</p>
+            </div>
+        </div>            
+
+        <section class="contact">
+            <form  action="#" method="POST" class="form">
+                <div class="col">
+                    <div class="input-control">
+                        <input type="text" id="contact-name" class="contact-name" placeholder="Name*...">
+                        <label for="contact-name">Name*</label>
+                    </div>
+
+                    <div class="input-control">
+                        <input type="email" id="contact-email" class="contact-email" placeholder="Email*...">
+                        <label for="contact-email">Email*</label>
+                    </div>
+
+                    <div class="input-control">
+                        <input type="tel" id="contact-tel" class="contact-tel" placeholder="Telefone...">
+                        <label for="contact-tel">Telefone</label>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="input-control">
+                        <textarea id="contact-message" class="contact-message" placeholder="Mensagem..."></textarea>
+                        <label for="contact-message">Mensagem</label>
+                    </div>
+                </div>
+                <input type="submit" value="Enviar" class="contact-submit">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <section>
+            <ul class="socials">
+                <li><a href="https://api.whatsapp.com/send?phone=5541988352630&text=Ol%C3%A1,%20Tenho%20interesse%20em%20uma%20das%20camisas%20do%20site!"><span class="hidden">Facebook</span><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href=""><span class="hidden">Twitter</span><i class="fab fa-twitter"></i></a></li>
+                <li><a href=""><span class="hidden">Google</span><i class="fab fa-google"></i></a></li>
+                <li><a href=""><span class="hidden">Instagram</span><i class="fab fa-instagram"></i></a></li>
+                <li><a href=""><span class="hidden">Email</span><i class="far fa-envelope"></i></a></li>
+            </ul>
+        </section>
+        <p class="copy">Copyright &copy; Prico 2021. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
