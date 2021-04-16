@@ -1,0 +1,562 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6rem;
+}
+
+img {
+    width: 100%;
+}
+
+h2 {
+    font-size: 2.4rem;
+}
+
+header {
+    padding: 10px 15px;
+}
+
+.logo {
+    display: inline-block;
+}
+
+.logo h1 {
+    background-image: url("../_img/logo.png");
+    background-repeat: no-repeat;
+    width: 124px;
+    height: 53px;
+    text-indent: -999px;
+}
+
+.title-menu {
+    display: inline-block;
+    text-indent: -9999px;
+}
+
+nav {
+    float: right;
+}
+
+.btn-menu{
+    position: relative;
+    top: -1px;
+    right: 0px;
+    width: 56px;
+    height: 56px;
+    padding: 10px;
+    float: right;
+    border-radius: 50%;
+    z-index: 10;            
+    /* background-image: linear-gradient(to right,#ffd700,rgb(204, 172, 0)); */
+    background-image: linear-gradient(to right,#ce2e3c, #da6709);
+}
+
+.btn-menu span {
+    display: block;
+    height: 4px;
+    margin: 6px;
+    border-radius: 10px;
+    /* background-color: #9e5b0f; */
+    background-color: #fff;
+    transition: transform .5s;
+}
+
+input#chk, .menu {
+    display: none;
+}
+
+.menu {
+    list-style: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    padding: 34px 20px;
+    background-color: rgb(0, 0, 0, .7);
+    /* background-color: rgb(218, 103, 9, .8); */
+}
+
+.menu li {
+    display: block;
+    text-align: center;
+}
+
+.menu li a {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 3.6rem;
+    /* color: #9e5b0f;   */
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none; 
+    transition: color .4s ease;         
+}
+
+.menu a:hover, .menu li a.active {
+    color: rgba(255, 215, 0);
+}
+
+input#chk:checked ~ .menu {
+    display: block;
+}
+
+input#chk:checked + .btn-menu span:first-child {
+    transform: rotate(45deg) translate(7px,7px);
+}
+
+input#chk:checked + .btn-menu span:nth-child(2) {
+    opacity: 0;
+}
+
+input#chk:checked + .btn-menu span:last-child {
+    transform: rotate(-45deg) translate(7px,-7px);
+}
+
+.hero {
+    position: relative;
+    background-image: url("../_img/bebidas-348.jpg");
+    background-attachment:fixed;
+    height: 232px;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-salgados {
+    background-image: url("../_img/salgados-480.jpg");
+    background-size: contain;
+}
+
+.hero-doces {
+    background-image: url("../_img/chocolates-480.jpg");
+    background-size: contain;
+}
+
+.hero-utensilios {
+    background-image: url("../_img/festas-480.jpg");
+}
+
+.hero-contato {
+    background-image: url("../_img/notebook-480.jpg");
+    background-position: -60px 0px;
+}
+
+.hero:after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .4);
+}
+
+.hero-slogan {
+    position: absolute;
+    width: 100%;
+    color: #fff;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hero-title {
+    font-size: 3.6rem;
+    font-weight: bold;
+}
+
+.hero-subtitle {
+    font-size: 2.4rem;
+}
+
+.destaque, .sign, .contact, footer {
+    padding: 15px;
+    text-align: center;
+}
+
+.destaque-title {
+    margin-top: 20px;
+    text-transform: uppercase;
+    letter-spacing: .7rem;
+}
+
+.box {
+    margin-bottom: 20px;
+}
+
+.box .product-name {
+    font-weight: normal;
+}
+
+.box .product-price {
+    font-weight: bold;
+    margin-top: 30px;
+    font-size: 2.0rem;
+}
+
+.btn-buy {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #ce2e3c;
+    color: #fff;
+    font-weight: bold;
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.sign, .contact {
+    background-image: linear-gradient(to right,#ce2e3c, #da6709);
+}
+
+.sign-title, .sign-subtitle {
+    color: #fff;
+}        
+
+input, textarea {
+    width: 100%;
+    padding: 15px;
+    margin-top: 7px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.6rem;
+}
+
+footer, footer a {
+    color: #ce2e3c;
+}
+
+.socials {
+    list-style: none;
+}
+
+.socials li {
+    display: inline-block;
+    margin-right: 3%;
+    font-size: 2.2rem;
+}
+
+.hidden {
+    display: inline-block;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+}
+
+.copy {
+    margin-top: 2%;
+}
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+textarea {
+    height: 160px;
+}
+
+.input-control {
+    position: relative;
+}
+
+.contact label {
+    position: absolute;
+    top: 15px;
+    left: 8px;
+    opacity: 0;
+    transition: all .4s ease;
+    color: #fff;
+    font-weight: bold;
+}
+
+.contact-name, .contact-email, .contact-tel, .contact-message{
+    margin-bottom: 20px;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 1.6rem;
+}
+
+.contact-name:focus + label, .contact-email:focus + label, .contact-tel:focus + label, .contact-message:focus + label {
+    top: -12px;
+    left: 0px;
+    opacity: 1;
+}
+
+@media all and (min-width: 426px) {
+    .hero-contato {
+        background-image: url("../_img/notebook-700.jpg");
+        background-size: contain;
+        background-position: 0 15px;
+    }
+
+    .hero-doces {
+        background-image: url("../_img/chocolates-700.jpg");
+        background-size: auto;
+    }
+
+    .hero-salgados {
+        background-image: url("../_img/salgados-700.jpg");
+        background-size: auto;
+    }
+
+    .hero-utensilios {
+        background-image: url("../_img/festas-700.jpg");
+        background-size: auto;
+    }
+
+    .box {
+        float: left;
+        width: 48%;
+    }
+    
+    .box:nth-child(even) {
+        margin-right: 4%;
+    }
+
+    .box img {
+        width: 100%;
+    }
+
+    .box .product-name {
+        font-size: 1.92rem;
+        height: 69px;
+    }
+
+    .box .product-price {
+        margin-top: 15px;
+    }
+
+}
+
+@media all and (min-width: 640px) {
+    .hero-salgados {
+        background-size: 100%;
+    }
+
+    .hero-utensilios {
+        background-size: cover;
+    }
+
+    .hero-contato {
+        background-size: cover;
+        background-position: 0 0;
+    }
+
+    .box {
+        width: 31%;
+    }
+    
+    .box:nth-child(even) {
+        margin-right: 0;
+    }
+    
+    .box:nth-of-type(3n - 1) {
+        margin-right: 3%;
+        margin-left: 3%;
+    }   
+
+    .sign-title {
+        font-size: 3.0rem;
+    }
+
+    .sign-subtitle {
+        font-size: 2.4rem;
+    }
+
+    .contact .col {
+        float: left;
+        width: 49%;
+    }
+
+    .contact .col:first-child {
+        margin-right: 2%;
+    }  
+    
+    .contact-message {
+        height: 175px;
+    }
+}
+
+@media all and (min-width: 768px) {
+    header {
+        padding: 2% 15px;
+    }    
+
+    .hero {
+        height: 282px;
+    } 
+    
+    .hero-contato {
+        background-image: url("../_img/notebook.jpg");
+        background-size: 100%;
+        background-position: 0 0;
+    }
+
+    .hero-salgados {
+        background-image: url("../_img/salgados-1200.jpg");
+    }
+
+    .hero-doces {
+        background-image: url("../_img/chocolates-1200.jpg");
+    }
+
+    .hero-utensilios {
+        background-image: url("../_img/festas-1200.jpg");
+        background-size: cover;
+    }
+
+    .btn-menu {
+        display: none;
+    }
+
+    .menu {
+        display: inline-block;
+        position: static;
+        width: auto;
+        height: auto;
+        padding: 0px;
+        background-color: #fff;
+    }
+
+    .menu li {
+        display: inline-block;
+        margin-top: 2px;
+        margin-left: 20px;
+    }
+    
+    .menu li a {
+        padding: 15px;
+        color: #ce2e3c;
+        font-size: 1.6rem;
+    }
+
+    .menu a:hover, .menu li a.active {
+        color: #ce2e3c;
+        box-shadow: 0 0 30px inset rgba(255, 215, 0);
+    }
+
+    .sign-email, .sign-submit {
+        margin-top: 2%;
+        padding: 20px;
+    }
+
+    .sign-submit, .contact-submit {
+        width: 29%;
+    }
+
+    .sign-email {
+        width: 70%;
+        margin-right: 1%;
+    }
+
+    .socials li {
+        font-size: 2.4rem;
+        margin-right: 3%;
+    }
+
+    footer {
+        padding: 3%;
+    }
+    
+}
+
+@media all and (min-width: 968px) {
+    header {
+        padding: 2% 15px;
+    }
+
+    nav {
+        margin-top: 5px;
+    }    
+
+    .logo h1 {
+        background-image: url("../_img/logo-156.webp");        
+        width: 156px;
+        height: 67px;
+    }
+                
+    .box:nth-of-type(3n - 1) {
+        margin-right: 2%;
+        margin-left: 0;
+    } 
+
+    .box:nth-child(even) {
+        margin-right: 2%;
+    }
+
+    .box {
+        width: 23.5%;
+        margin-right: 2%;
+    }
+
+    .box:nth-of-type(4n) {
+        margin-right: 0;
+    }
+
+    .destaque, .sign {
+        padding: 3% 2%;
+    }
+
+    .sign-email {
+        width: 60%;
+    }
+
+    .contact {
+        padding: 3%;
+    }
+
+    .contact-name, .contact-email, .contact-tel, .contact-message{
+        padding: 20px;
+    }
+
+    .contact-message {
+        height: 230px;
+    }
+}
+
+@media all and (min-width: 1200px) {
+    .hero-doces {
+        background-size: cover;
+    }
+}
+
+
+@media all and (min-width: 1400px) {
+    html {
+        font-size: 75.5%;
+    }
+
+    header {
+        padding: 2%;
+    }
+
+    .hero-contato {
+        background-size: cover;
+        background-position: 0 -145px;
+    }
+
+    .destaque, .sign {
+        padding: 3% 2%;
+    }
+
+    .contact-name:focus + label, .contact-email:focus + label, .contact-tel:focus + label, .contact-message:focus + label {
+        top: -15px;
+        left: 0px;
+        opacity: 1;
+    }
+}
